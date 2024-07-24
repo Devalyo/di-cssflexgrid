@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #F7F7FF;
+    background-image: url("/media/background.jpg");
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    background: #070600;
+    color: #fff;
+    border-bottom: #1E1E1E 3px solid;
+    padding: 1vh;
+    position: fixed;
+    width: 100vw;
+    justify-content: center;
+}
+
+header h1 {
+    float: left;
+    display: inline;
+}
+
+
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+
+
+header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+header a:hover {
+    color: #585858;
+}
+
+main {
+    padding: 10px;
+}
+
+.inicio
+{
+    display: flex;
+    background:  #070600fa;
+    flex-direction: column;
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+    padding: 5rem;
+    color: #ccc;
+    border-radius: 2%;
+
+}
+.inicio img
+{
+    width: 100px;
+    height: auto;
+}
+.inicio h2
+{
+    font-size: 5rem;
+    padding-bottom:0.5rem;
+}
+.inicio h3
+{
+    font-size: 2.5rem;
+    padding-bottom: 1.5rem;
+}
+.inicio p
+{
+    font-size: 1.5rem;
+}
+
+
+.articles {
+    display: grid;
+    gap: 20px;
+}
+
+article {
+    background:  #070600fd;
+    padding: 20px;
+    border: #ccc 1px solid;
+}
+
+article h2 {
+    color: #f0f0f0;
+    font-size: 2.5rem;
+    padding:2rem;
+}
+
+article p {
+    color: #f0f0f0;
+    padding: 3rem;
+    font-size: 1.5rem;
+}
+
+article img
+{
+    float: right;
+    padding: 5rem;
+    max-width: 500px;
+
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    padding-top: 10vh;
+    color: #ccc;
+}
+
+.album {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #070600e2;
+    padding: 10px;
+}
+.album:hover
+{
+    border:3px solid red;
+}
+
+.album figcaption h2 {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.album figcaption p {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #faf9f9;
+    font-size: 1rem;
+}
+
+
+footer
+{
+    color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #070600;
+    padding: 13px;
+    margin-top: 3vh;
+}
+
+
+@media screen and (max-width: 600px) {
+    
+    .inicio
+    {
+        padding: 2rem;
+    }
+    .inicio h2{
+        font-size: 4rem;
+    }
+    .galeria {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    .articles img
+    {
+        float: none;
+        max-width: 200px;
+        height: auto;
+        padding:10px;
+        margin:0px;
+
+    }
+    .articles
+    {
+        padding: 0px;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+    .articles p
+    {
+        padding: 5px;
+    }
+
+    .container
+    {
+        width: 100%;
+    }
+
+    header h1 
+    {
+        float: none;
+        display: none;
+    }
+    header a
+    {
+        float: none;
+        font-size: 1.2rem;
+    }
+
+}
